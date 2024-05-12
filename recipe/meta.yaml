@@ -1,5 +1,5 @@
 {% set name = "optimistix" %}
-{% set version = "0.0.6" %}
+{% set version = "0.0.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/optimistix-{{ version }}.tar.gz
-  sha256: a9dab1052a9579769d7967f420018adf13aa9650d11198a018209dd0ac0b441a
+  sha256: 0c649293b01c2029a5f9878fbb912d4977105830b4368b0d44b710b621c49ac3
 
 build:
   noarch: python
