@@ -1,5 +1,5 @@
 {% set name = "optimistix" %}
-{% set version = "0.0.7" %}
+{% set version = "0.0.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/optimistix-{{ version }}.tar.gz
-  sha256: 0c649293b01c2029a5f9878fbb912d4977105830b4368b0d44b710b621c49ac3
+  sha256: dc544f91e37f8bc6d85e3a50005ded17ce8e7a093306e6caf8add2938ed88397
 
 build:
   noarch: python
@@ -21,10 +21,10 @@ requirements:
     - pip
   run:
     - python >=3.9
-    - jax >=0.4.18
+    - jax >=0.4.28
     - jaxtyping >=0.2.23
-    - lineax >=0.0.4
-    - equinox >=0.11.1
+    - lineax >=0.0.6
+    - equinox >=0.11.7
     - typing-extensions >=4.5.0
 
 test:
