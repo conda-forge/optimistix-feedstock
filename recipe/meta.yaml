@@ -20,13 +20,12 @@ requirements:
     - hatchling
     - pip
   run:
-    - typing_extensions >=4.5.0
     - python >=3.9
+    - equinox >=0.11.7
+    - lineax >=0.0.6
     - jax >=0.4.28
     - jaxtyping >=0.2.23
-    - lineax >=0.0.6
-    - equinox >=0.11.7
-    - typing-extensions >=4.5.0
+    - typing_extensions >=4.5.0
 
 test:
   imports:
