@@ -1,0 +1,53 @@
+schema_version: 1
+
+context:
+  name: optimistix
+  version: 0.0.10
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/optimistix-${{ version }}.tar.gz
+  sha256: 80a481d66d64c9445eaf74158b71d65a9087b7e038f0c4bc7714ef5ff6350050
+
+build:
+  number: 1
+  noarch: python
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python ${{ python_min }}.*
+    - hatchling
+    - pip
+  run:
+    - python >=${{ python_min }}
+    - equinox >=0.11.7
+    - lineax >=0.0.6
+    - jax >=0.4.28
+    - jaxtyping >=0.2.23
+    - typing_extensions >=4.5.0
+
+tests:
+  - python:
+      imports:
+        - optimistix
+      python_version: ${{ python_min }}.*
+  - requirements:
+      run:
+        - pip
+        - python ${{ python_min }}.*
+    script:
+      - pip check
+
+about:
+  summary: Nonlinear optimisation in JAX and Equinox.
+  license: Apache-2.0
+  license_file: LICENSE
+  homepage: https://github.com/patrick-kidger/optimistix
+
+extra:
+  recipe-maintainers:
+    - dhirschfeld
