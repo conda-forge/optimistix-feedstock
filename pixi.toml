@@ -7,7 +7,7 @@
 
 [project]
 name = "optimistix-feedstock"
-version = "3.47.1"  # conda-smithy version used to generate this file
+version = "3.52.3"  # conda-smithy version used to generate this file
 description = "Pixi configuration for conda-forge/optimistix-feedstock"
 authors = ["@conda-forge/optimistix"]
 channels = ["conda-forge"]
@@ -34,6 +34,7 @@ description = "List contents of optimistix-feedstock packages built for variant 
 
 [feature.smithy.dependencies]
 conda-smithy = "*"
+shellcheck = "*"
 [feature.smithy.tasks.build-locally]
 cmd = "python ./build-locally.py"
 description = "Build packages locally using the same setup scripts used in conda-forge's CI"
