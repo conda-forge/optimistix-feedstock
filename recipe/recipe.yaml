@@ -3,7 +3,6 @@ schema_version: 1
 context:
   name: optimistix
   version: 0.0.11
-  python_min: '3.9'
 
 package:
   name: ${{ name|lower }}
